@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilterEnabled="True" FFXIVJobFilter="137438953472" Id="5ac78fb6-c09a-414f-8db6-96a49211f8f5" Name="茄哥哥" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="百花提醒" Id="42effa9f-08e1-470c-a910-4b9e5aefc714" RegularExpression="^.{14} 15:.{8}:(?&lt;player&gt;.*?):3E8D:">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="百花" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="百花百花" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="59000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="黄舞提醒" Id="223926b4-2a16-4c3d-a525-5ffaf1f27c90" RegularExpression="^.{14} 15:.{8}:(?&lt;player&gt;.*?):3E7D:标准舞步">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="黄武" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="准备跳黄舞" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="25000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="大舞提醒" Id="ffa1cbcf-3318-4046-8153-3b32e686ee10" RegularExpression="^.{14} 15:.{8}:(?&lt;player&gt;.*?):3E7E:技巧舞步">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="大武" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="准备大舞" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" ExecutionDelayExpression="115000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
