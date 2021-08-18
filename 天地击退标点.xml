@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="3659f347-31e0-4211-8e9f-cbad6e4bbe07" Name="天地轮椅" Enabled="true">
+  <ExportedFolder Id="1575fe60-604e-42a2-8b33-401edbb042e9" Name="天地轮椅" Enabled="true">
     <Folders>
-      <Folder Id="96973e09-f887-4dd0-b419-5ef5512d7f65" Name="天地" Enabled="true">
+      <Folder Id="39c9c921-e89a-449b-b0e0-2baac03a64f2" Name="天地" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="天地奈儿位置" Id="ffa78eeb-7165-4895-bbf8-9bc8d1baa4a6" RegularExpression="^.{15}00:0000:105:(?&lt;id&gt;[^:]*):.{4}(?:[^:]*:){4}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+          <Trigger Enabled="true" Name="天地奈儿位置" Id="11eeda17-f0df-4575-b5e8-f298798ea8d1" RegularExpression="^.{15}00:0000:105:(?&lt;id&gt;[^:]*):.{4}(?:[^:]*:){4}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="奈儿初始位置" VariableExpression="${numeric:(round(8-arctan2(${x},${y})*8/pi)%16)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -22,7 +22,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="天地塔" Id="f8c372c9-8406-46c9-9a80-22f5e34e93a3" RegularExpression="^.{15}00:0000:104:(?&lt;sourceId&gt;(?:[^:]*)):(?&lt;source&gt;(?:[^:]*)):26DF:(?:[^:]*:){6}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+          <Trigger Enabled="true" Sequential="True" Name="天地塔" Id="8424f070-bc52-4ee3-8b86-47113dbd5bed" RegularExpression="^.{15}00:0000:104:(?&lt;sourceId&gt;(?:[^:]*)):(?&lt;source&gt;(?:[^:]*)):26DF:(?:[^:]*:){6}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="天地塔" ListVariableExpression="${func:dec2hex:${numeric:${numeric:round(8-arctan2(${x},${y})*8/pi)%16)}-${var:奈儿初始位置}}}" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                 <Condition Enabled="true" Grouping="And">
@@ -58,49 +58,49 @@
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[1]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="ST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="ST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[2]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="H2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="H2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[3]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="D2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="D2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[4]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="D4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="D4" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[5]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="D3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="D3" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[6]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="D1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="D1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[7]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="H1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="H1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[8]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="自己的职能顺序" ExpressionTypeL="String" ExpressionR="MT" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:自己的职能顺序}" ExpressionTypeL="String" ExpressionR="MT" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
                 <Conditions />
               </Action>
@@ -116,7 +116,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="天地阶段" Id="c159a7ac-5258-49e1-85b6-b3093db9a87c" RegularExpression="^.{14} 14:26E5:">
+          <Trigger Enabled="true" Name="天地阶段" Id="10e8e653-903d-4fdb-a0e1-e6d2d073cf0b" RegularExpression="^.{14} 14:26E5:">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="天地" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -138,7 +138,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="奈儿id" Id="0a269a97-2b35-4a84-9c85-342fc4283865" RegularExpression="^.{15}03:(?&lt;id&gt;.{8}):(?:[^:]*:){5} \((?&lt;x&gt;.+?),(?&lt;y&gt;.+?),(?&lt;z&gt;.+?)\) \(26120000008161\).">
+          <Trigger Enabled="true" Name="奈儿id" Id="e07dd5d1-b7fb-459f-b534-37e163eb583a" RegularExpression="^.{15}03:(?&lt;id&gt;.{8}):(?:[^:]*:){5} \((?&lt;x&gt;.+?),(?&lt;y&gt;.+?),(?&lt;z&gt;.+?)\) \(26120000008161\).">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="奈儿id" VariableExpression="${id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -171,7 +171,7 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="设置自己的位置(天地轮椅一定要设置)" Id="29d1a919-59a5-44c1-929b-b0b82a370cb8" RegularExpression="^.{14} 14:26E5:">
+      <Trigger Enabled="true" Name="设置自己的位置(天地轮椅一定要设置)" Id="2316b539-c298-42cf-a2ec-da3f0c8baeec" RegularExpression="^.{14} 14:26E5:">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="自己的职能顺序" VariableExpression="D3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
@@ -181,7 +181,7 @@
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="游戏开始时重置变量" Id="ceefecd9-62f6-4a4c-81b7-c76a3f3f8523" RegularExpression="\] 21:........:40000010:00:00:00:00|任务开始|has begun.|の攻略を開始した。|战斗开始|戦闘開始|Battle commencing in" PeriodRefire="Deny" RefirePeriodExpression="30000">
+      <Trigger Enabled="true" Name="游戏开始时重置变量" Id="d92d6fa1-a985-46b5-8ab9-622585711b4a" RegularExpression="\] 21:........:40000010:00:00:00:00|任务开始|has begun.|の攻略を開始した。|战斗开始|戦闘開始|Battle commencing in" PeriodRefire="Deny" RefirePeriodExpression="30000">
         <Actions>
           <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="天地" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
