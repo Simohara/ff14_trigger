@@ -1,17 +1,21 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="1575fe60-604e-42a2-8b33-401edbb042e9" Name="天地轮椅" Enabled="true">
+  <ExportedFolder Id="e62fbadb-f504-495a-b341-60ac59f2395b" Name="天地轮椅标点版" Enabled="false">
     <Folders>
-      <Folder Id="39c9c921-e89a-449b-b0e0-2baac03a64f2" Name="天地" Enabled="true">
+      <Folder Id="1aefdf01-05fc-45a7-a551-8dc2b516ef66" Name="天地" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="天地奈儿位置" Id="11eeda17-f0df-4575-b5e8-f298798ea8d1" RegularExpression="^.{15}00:0000:105:(?&lt;id&gt;[^:]*):.{4}(?:[^:]*:){4}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+          <Trigger Enabled="true" Name="天地奈儿位置" Id="ed45da2d-78e2-4479-8c93-64e1d9428881" RegularExpression="^.{15}00:0000:105:(?&lt;id&gt;[^:]*):.{4}(?:[^:]*:){4}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="奈儿初始位置" VariableExpression="${numeric:(round(8-arctan2(${x},${y})*8/pi)%16)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableName="奈儿初始位置" VariableExpression="${numeric:(round(4-arctan2(${x},${y})*4/pi)%8)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="30000" Asynchronous="False">
+              <Action OrderNumber="2" LogMessageText="找到天地奈儿位置:${var:奈儿初始位置}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableName="奈儿初始位置" VariableExpression="${numeric:(round(4-arctan2(${x},${y})*4/pi)%8)} " TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="30000" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -22,7 +26,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="天地塔" Id="8424f070-bc52-4ee3-8b86-47113dbd5bed" RegularExpression="^.{15}00:0000:104:(?&lt;sourceId&gt;(?:[^:]*)):(?&lt;source&gt;(?:[^:]*)):26DF:(?:[^:]*:){6}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+          <Trigger Enabled="true" Name="天地塔" Id="46319d2e-da00-451a-96d4-4a679b40f073" RegularExpression="^.{15}00:0000:104:(?&lt;sourceId&gt;(?:[^:]*)):(?&lt;source&gt;(?:[^:]*)):26DF:(?:[^:]*:){6}(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
             <Actions>
               <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="天地塔" ListVariableExpression="${func:dec2hex:${numeric:${numeric:round(8-arctan2(${x},${y})*8/pi)%16)}-${var:奈儿初始位置}}}" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                 <Condition Enabled="true" Grouping="And">
@@ -36,15 +40,27 @@
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="3" ListVariableOp="SortAlphaAsc" ListVariableName="天地塔" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="100">
+              <Action OrderNumber="3" LogMessageText="天地塔记录${x}, ${y}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="0f24a881-42b9-4de3-abe1-3ac54b74f554" TriggerText="测试踩塔" ActionType="Trigger" ExecutionDelayExpression="100">
+              <Action OrderNumber="4" ListVariableOp="SortAlphaAsc" ListVariableName="天地塔" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="5" ListVariableName="天地塔" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="10000">
+              <Action OrderNumber="5" LogMessageText="排序天地塔" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ed4ae417-1f48-471c-8585-a98094cdc2d1" TriggerText="测试踩塔" ActionType="Trigger" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogMessageText="触发测试踩塔" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" ListVariableName="天地塔" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="10000">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -54,7 +70,7 @@
             </Condition>
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="天地塔标点" Id="0f24a881-42b9-4de3-abe1-3ac54b74f554" RegularExpression="测试踩塔" PrevActions="Interrupt">
+          <Trigger Enabled="true" Sequential="True" Name="天地塔标点" Id="ed4ae417-1f48-471c-8585-a98094cdc2d1" RegularExpression="测试踩塔" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="踩的塔" VariableExpression="${numeric:(hex2dec(${lvar:天地塔[1]})+${var:奈儿初始位置})%16}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="And">
@@ -104,11 +120,19 @@
                 </Condition>
                 <Conditions />
               </Action>
-              <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2019/place" JsonPayloadExpression="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:${numeric:round(10*sin(pi-${var:踩的塔}*0.125pi),5)},&quot;Y&quot;:0.0,&quot;Z&quot;:${numeric:round(10*cos(pi-${var:踩的塔}*0.125pi),5)},&quot;ID&quot;:0,&quot;Active&quot;:true}}" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:${numeric:round(10*sin(pi-${var:踩的塔}*0.125pi),5)},&quot;Y&quot;:0.0,&quot;Z&quot;:${numeric:round(10*cos(pi-${var:踩的塔}*0.125pi),5)},&quot;ID&quot;:0,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+              <Action OrderNumber="9" LogMessageText="条件筛选完毕,踩的塔为${var:踩的塔}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="10" LogMessageText="${var:踩的塔},坐标:{&quot;A&quot;:{&quot;X&quot;:${numeric:round(10*sin(pi-${var:踩的塔}*0.125pi),5)}},&quot;Z&quot;:${numeric:round(10*cos(pi-${var:踩的塔}*0.125pi),5)}" MouseX="" MouseY="" NamedCallbackName="place" NamedCallbackParam="{&quot;A&quot;:{&quot;X&quot;:0.09310722,&quot;Y&quot;:0.0,&quot;Z&quot;:-19,&quot;ID&quot;:0,&quot;Active&quot;:ture}" VariableName="${var:踩的塔}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20000">
+              <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2019/place" JsonPayloadExpression="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:${numeric:round(10*sin(pi-${var:踩的塔}*0.125pi),5)},&quot;Y&quot;:0.0,&quot;Z&quot;:${numeric:round(10*cos(pi-${var:踩的塔}*0.125pi),5)},&quot;ID&quot;:0,&quot;Active&quot;:true}}" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:${numeric:round(10*sin(pi-${var:踩的塔}*0.125pi),5)},&quot;Y&quot;:0.0,&quot;Z&quot;:${numeric:round(10*cos(pi-${var:踩的塔}*0.125pi),5)},&quot;ID&quot;:0,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" LogMessageText="开始标点" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" LogMessageText="${var:踩的塔},坐标:{&quot;A&quot;:{&quot;X&quot;:${numeric:round(10*sin(pi-${var:踩的塔}*0.125pi),5)}},&quot;Z&quot;:${numeric:round(10*cos(pi-${var:踩的塔}*0.125pi),5)}" MouseX="" MouseY="" NamedCallbackName="place" NamedCallbackParam="{&quot;A&quot;:{&quot;X&quot;:0.09310722,&quot;Y&quot;:0.0,&quot;Z&quot;:-19,&quot;ID&quot;:0,&quot;Active&quot;:ture}" VariableName="${var:踩的塔}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="20000">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -116,21 +140,33 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="天地阶段" Id="10e8e653-903d-4fdb-a0e1-e6d2d073cf0b" RegularExpression="^.{14} 14:26E5:">
+          <Trigger Enabled="true" Name="天地阶段" Id="afba4ccc-7be2-4e1f-a155-2b8e241b12e4" RegularExpression="^.{14} 14:26E5:">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="天地" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${var:标点工具监听端口}/place" JsonPayloadExpression="{&quot;A&quot;:{&quot;X&quot;:0.09310722,&quot;Y&quot;:0.0,&quot;Z&quot;:-19,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:19,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:0.0562648177,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.107087493,&quot;Y&quot;:0.0,&quot;Z&quot;:19,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:-19,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:-0.191790581,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:0.07961208,&quot;Y&quot;:-1.90734863E-06,&quot;Z&quot;:0.0431003571,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.104299545,&quot;Y&quot;:0.0,&quot;Z&quot;:-9.92495,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;Active&quot;:false},&quot;Four&quot;:{&quot;Active&quot;:false}}" NamedCallbackName="place" NamedCallbackParam="{&quot;A&quot;:{&quot;X&quot;:0.09310722,&quot;Y&quot;:0.0,&quot;Z&quot;:-19,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:19,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:0.0562648177,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.107087493,&quot;Y&quot;:0.0,&quot;Z&quot;:19,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:-19,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:-0.191790581,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:0.07961208,&quot;Y&quot;:-1.90734863E-06,&quot;Z&quot;:0.0431003571,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.104299545,&quot;Y&quot;:0.0,&quot;Z&quot;:-9.92495,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;Active&quot;:false},&quot;Four&quot;:{&quot;Active&quot;:false}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="7000">
+              <Action OrderNumber="2" LogMessageText="天地变量至1" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${var:标点工具监听端口}/place" JsonPayloadExpression="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-21.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:22.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-21.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:7,&quot;Active&quot;:true}}" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-21.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:22.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-21.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:7,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="24000">
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${var:标点工具监听端口}/place" JsonPayloadExpression="{&quot;A&quot;:{&quot;X&quot;:0.09310722,&quot;Y&quot;:0.0,&quot;Z&quot;:-19,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:19,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:0.0562648177,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.107087493,&quot;Y&quot;:0.0,&quot;Z&quot;:19,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:-19,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:-0.191790581,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:0.07961208,&quot;Y&quot;:-1.90734863E-06,&quot;Z&quot;:0.0431003571,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.104299545,&quot;Y&quot;:0.0,&quot;Z&quot;:-9.92495,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;Active&quot;:false},&quot;Four&quot;:{&quot;Active&quot;:false}}" NamedCallbackName="place" NamedCallbackParam="{&quot;A&quot;:{&quot;X&quot;:0.09310722,&quot;Y&quot;:0.0,&quot;Z&quot;:-19,&quot;ID&quot;:0,&quot;Active&quot;:false},&quot;B&quot;:{&quot;X&quot;:19,&quot;Y&quot;:-9.536743E-07,&quot;Z&quot;:0.0562648177,&quot;ID&quot;:1,&quot;Active&quot;:false},&quot;C&quot;:{&quot;X&quot;:0.107087493,&quot;Y&quot;:0.0,&quot;Z&quot;:19,&quot;ID&quot;:2,&quot;Active&quot;:false},&quot;D&quot;:{&quot;X&quot;:-19,&quot;Y&quot;:9.536743E-07,&quot;Z&quot;:-0.191790581,&quot;ID&quot;:3,&quot;Active&quot;:false},&quot;One&quot;:{&quot;X&quot;:0.07961208,&quot;Y&quot;:-1.90734863E-06,&quot;Z&quot;:0.0431003571,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.104299545,&quot;Y&quot;:0.0,&quot;Z&quot;:-9.92495,&quot;ID&quot;:5,&quot;Active&quot;:false},&quot;Three&quot;:{&quot;Active&quot;:false},&quot;Four&quot;:{&quot;Active&quot;:false}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="7000">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
-              <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="天地" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+              <Action OrderNumber="4" LogMessageText="天地取消标点" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:${var:标点工具监听端口}/place" JsonPayloadExpression="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-21.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:22.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-21.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:7,&quot;Active&quot;:true}}" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;绝巴哈&quot;,&quot;MapID&quot;:0,&quot;A&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-21.0,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:22.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:1,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:10.0,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-21.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:0.0,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-10.0,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:9.0,&quot;Y&quot;:0.0,&quot;Z&quot;:-3.0,&quot;ID&quot;:7,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="24000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetNumeric" VariableName="天地" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogMessageText="天地变量至0" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
@@ -138,7 +174,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="奈儿id" Id="e07dd5d1-b7fb-459f-b534-37e163eb583a" RegularExpression="^.{15}03:(?&lt;id&gt;.{8}):(?:[^:]*:){5} \((?&lt;x&gt;.+?),(?&lt;y&gt;.+?),(?&lt;z&gt;.+?)\) \(26120000008161\).">
+          <Trigger Enabled="true" Name="奈儿id" Id="9a568dd1-dbdb-48f2-a44d-361a410836e6" RegularExpression="^.{15}03:(?&lt;id&gt;.{8}):(?:[^:]*:){5} \((?&lt;x&gt;.+?),(?&lt;y&gt;.+?),(?&lt;z&gt;.+?)\) \(26120000008161\).">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="奈儿id" VariableExpression="${id}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -148,16 +184,20 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
+              <Action OrderNumber="3" LogMessageText="找到奈儿id" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder ZoneFilterEnabled="True" Id="9abc4d30-09e6-4feb-963f-f03a5c33c8fc" ZoneFilterRegularExpression="巴哈姆特绝境战" Name="巴哈战斗开始自动标点,需要配合使用" Enabled="true">
+      <Folder ZoneFilterEnabled="True" Id="449e2140-f860-441c-b566-bd10f3f09742" ZoneFilterRegularExpression="巴哈姆特绝境战" Name="巴哈战斗开始自动标点,需要配合使用" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="巴哈重置" Id="6cf3be24-cf7a-40b9-894a-24a0fb9f10bd" RegularExpression="距离战斗开始还有10秒！" PeriodRefire="Deny" RefirePeriodExpression="2000">
+          <Trigger Enabled="true" Name="巴哈重置" Id="78e74869-7c4f-412b-8450-3f5b8959efa9" RegularExpression="距离战斗开始还有10秒！" PeriodRefire="Deny" RefirePeriodExpression="2000">
             <Actions>
               <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2019/place" JsonPayloadExpression="{&quot;Name&quot;:&quot;44&quot;,&quot;A&quot;:{&quot;X&quot;:-0.07233447,&quot;Y&quot;:-0.0000009536743,&quot;Z&quot;:-22.2067833,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:22,&quot;Y&quot;:0,&quot;Z&quot;:0,&quot;ID&quot;:7,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.290453434,&quot;Y&quot;:-0.00000381469727,&quot;Z&quot;:9.521973,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-22,&quot;Y&quot;:0,&quot;Z&quot;:0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.07961208,&quot;Y&quot;:-0.00000190734863,&quot;Z&quot;:0.0431003571,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.104299545,&quot;Y&quot;:0,&quot;Z&quot;:-9.92495,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-7.49105072,&quot;Y&quot;:-0.00000190734863,&quot;Z&quot;:-3.033144,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:8.039988,&quot;Y&quot;:0.00000190734863,&quot;Z&quot;:-3.37868881,&quot;ID&quot;:1,&quot;Active&quot;:true}}" NamedCallbackName="place" NamedCallbackParam="{&quot;Name&quot;:&quot;44&quot;,&quot;A&quot;:{&quot;X&quot;:-0.07233447,&quot;Y&quot;:-0.0000009536743,&quot;Z&quot;:-22.2067833,&quot;ID&quot;:0,&quot;Active&quot;:true},&quot;B&quot;:{&quot;X&quot;:22,&quot;Y&quot;:0,&quot;Z&quot;:0,&quot;ID&quot;:7,&quot;Active&quot;:true},&quot;C&quot;:{&quot;X&quot;:0.290453434,&quot;Y&quot;:-0.00000381469727,&quot;Z&quot;:9.521973,&quot;ID&quot;:2,&quot;Active&quot;:true},&quot;D&quot;:{&quot;X&quot;:-22,&quot;Y&quot;:0,&quot;Z&quot;:0,&quot;ID&quot;:6,&quot;Active&quot;:true},&quot;One&quot;:{&quot;X&quot;:0.07961208,&quot;Y&quot;:-0.00000190734863,&quot;Z&quot;:0.0431003571,&quot;ID&quot;:4,&quot;Active&quot;:true},&quot;Two&quot;:{&quot;X&quot;:0.104299545,&quot;Y&quot;:0,&quot;Z&quot;:-9.92495,&quot;ID&quot;:5,&quot;Active&quot;:true},&quot;Three&quot;:{&quot;X&quot;:-7.49105072,&quot;Y&quot;:-0.00000190734863,&quot;Z&quot;:-3.033144,&quot;ID&quot;:3,&quot;Active&quot;:true},&quot;Four&quot;:{&quot;X&quot;:8.039988,&quot;Y&quot;:0.00000190734863,&quot;Z&quot;:-3.37868881,&quot;ID&quot;:1,&quot;Active&quot;:true}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
@@ -171,7 +211,7 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="设置自己的位置(天地轮椅一定要设置)" Id="2316b539-c298-42cf-a2ec-da3f0c8baeec" RegularExpression="^.{14} 14:26E5:">
+      <Trigger Enabled="true" Name="设置自己的位置(天地轮椅一定要设置)" Id="cc890d8c-cef6-4891-9576-11ce4d350da8" RegularExpression="\] 21:........:40000010:00:00:00:00|任务开始|has begun.|の攻略を開始した。|战斗开始|戦闘開始|Battle commencing in">
         <Actions>
           <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="自己的职能顺序" VariableExpression="D3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
@@ -181,7 +221,7 @@
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="游戏开始时重置变量" Id="d92d6fa1-a985-46b5-8ab9-622585711b4a" RegularExpression="\] 21:........:40000010:00:00:00:00|任务开始|has begun.|の攻略を開始した。|战斗开始|戦闘開始|Battle commencing in" PeriodRefire="Deny" RefirePeriodExpression="30000">
+      <Trigger Enabled="true" Name="游戏开始时重置变量" Id="44f408c8-dbfa-4703-8e13-68272c86ee71" RegularExpression="\] 21:........:40000010:00:00:00:00|任务开始|has begun.|の攻略を開始した。|战斗开始|戦闘開始|Battle commencing in" PeriodRefire="Deny" RefirePeriodExpression="30000">
         <Actions>
           <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="天地" VariableExpression="0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
