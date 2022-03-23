@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder ZoneFilterEnabled="True" Id="ac900939-ed89-4739-9480-2dc7542d328c" ZoneFilterRegularExpression="^金碟游乐场$" Name="金蝶一刀修正" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Sequential="True" Name="钢铁" Id="b85cebbe-f9c0-48aa-be2b-93bb1f586110" RegularExpression="^.{15}00:0000:101:(?&lt;id&gt;.{8}):0005:.{4}:1EAE9B:E0000000:(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="钢铁 x:${x},y:${y}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage" ExecutionDelayExpression="200">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(0*pi/6)-35.9561),(13.7*sin(0*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(1*pi/6)-35.9561),(13.7*sin(1*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(2*pi/6)-35.9561),(13.7*sin(2*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="4" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(3*pi/6)-35.9561),(13.7*sin(3*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="5" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(4*pi/6)-35.9561),(13.7*sin(4*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="6" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(5*pi/6)-35.9561),(13.7*sin(5*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(6*pi/6)-35.9561),(13.7*sin(6*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="8" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(7*pi/6)-35.9561),(13.7*sin(7*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="9" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(8*pi/6)-35.9561),(13.7*sin(8*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="10" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(9*pi/6)-35.9561),(13.7*sin(9*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="11" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(10*pi/6)-35.9561),(13.7*sin(10*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="13" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="12" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="distance((13.7*cos(11*pi/6)-35.9561),(13.7*sin(11*pi/6)+70.5625),${y},${x})" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="9B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="初始化list" Id="db929960-3cfc-4bd1-9ae4-f4e9ab9a0653" RegularExpression="^.{15}00:0000:101:.{8}:0005:.{4}:1EAE(9B|9A|99):E0000000:" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="3000" MutexToCapture="一刀初始化">
+        <Actions>
+          <Action OrderNumber="1" ListVariableName="安全点list" LogLevel="-1" MouseX="" MouseY="" VariableName="安全点" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="安全点" VariableExpression="0 0 0 0 0 0 0 0 0 0 0 0" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Split" ListVariableName="安全点" ListVariableExpression=" " ListVariableTarget="安全点list" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="10">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Join" ListVariableName="安全点list" ListVariableExpression=" " ListVariableTarget="安全点" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="1000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" LogMessageText="安全点为${var:安全点}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableName="安全点" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="1000">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" ListVariableName="安全点list" LogLevel="-1" MouseX="" MouseY="" VariableName="安全点" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="一边" Id="c5c735fd-5a22-4d2f-bdd1-bca0255533f0" RegularExpression="^.{15}00:0000:101:(?&lt;id&gt;.{8}):0005:.{4}:1EAE99:E0000000:(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="一边 ${id} no heading :${_ffxiventity[${id}].heading}, x: ${x}, y: ${y}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage" ExecutionDelayExpression="200">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(0*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(0*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(0*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(0*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(1*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(1*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(1*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(1*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(2*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(2*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(2*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(2*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="4" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(3*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(3*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(3*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(3*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="5" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(4*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(4*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(4*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(4*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="7" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="6" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(5*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(5*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(5*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(5*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="8" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(6*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(6*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(6*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(6*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="9" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="8" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(7*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(7*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(7*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(7*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="10" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="9" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(8*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(8*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(8*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(8*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="11" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="10" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(9*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(9*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(9*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(9*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="12" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="11" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(10*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(10*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(10*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(10*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="13" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="12" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(11*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(11*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="sin(${_ffxiventity[${id}].heading})*(13.7*cos(11*pi/6)-35.9561-${y})-cos(${_ffxiventity[${id}].heading})*(13.7*sin(11*pi/6)+70.5625-${x})" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="9B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="两边" Id="e574afc1-865e-4f7d-a1de-d226179e05b1" RegularExpression="^.{15}00:0000:101:(?&lt;id&gt;.{8}):0005:.{4}:1EAE9A:E0000000:(?&lt;x&gt;.+?):(?&lt;y&gt;.+?):(?&lt;z&gt;.+?):">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="两边${id} no heading :${_ffxiventity[${id}].heading}, x:${x}, y:${y}" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage" ExecutionDelayExpression="200">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(0*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(0*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(1*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(1*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(2*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(2*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="4" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(3*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(3*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="5" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(4*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(4*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="6" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(5*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(5*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(6*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(6*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="8" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(7*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(7*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="9" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(8*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(8*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="10" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(9*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(9*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="11" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(10*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(10*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="13" ListVariableOp="Set" ListVariableExpressionType="Numeric" ListVariableName="安全点list" ListVariableExpression="1" ListVariableIndex="12" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="abs(cos(${_ffxiventity[${id}].heading})*(13.7*cos(11*pi/6)-35.9561-${y})+sin(${_ffxiventity[${id}].heading})*(13.7*sin(11*pi/6)+70.5625-${x}))" ExpressionTypeL="Numeric" ExpressionR="2.65" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="9B" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="作图" Id="6825b1c5-8548-4fa5-b5e9-760ded94f3d3" RegularExpression="^.{15}00:0000:101:.{8}:0005:.{4}:1EAE(9B|9A|99):E0000000:" PrevActionsRefire="Deny" Scheduling="FromRefirePeriod" PeriodRefire="Deny" RefirePeriodExpression="5000" MutexToCapture="作图">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="开始作图" LogLevel="Warning" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="^yidao.*" TextAuraFontName="宋体" ActionType="TextAura" ExecutionDelayExpression="350" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="9" TextAuraBackground="Black" TextAuraName="背景" TextAuraXIniExpression="2*${_screenwidth}/3-225/2" TextAuraYIniExpression="${_screenheight}/2-250/2" TextAuraWIniExpression="250" TextAuraHIniExpression="250" TextAuraOIniExpression="30" TextAuraTTLTickExpression="10000-${_sincems}" TextAuraFontName="宋体" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" TextAuraAlignment="MiddleLeft" TextAuraFontSize="9" TextAuraForeground="White" TextAuraBackground="Blue" TextAuraName="yidao_you" TextAuraExpression="YOU" TextAuraWIniExpression="25" TextAuraHIniExpression="25" TextAuraOIniExpression="80" TextAuraXTickExpression="2*${_screenwidth}/3-7*(${_ffxiventity[${_ffxivplayer}].x}-70.5625)" TextAuraYTickExpression="${_screenheight}/2-7*(${_ffxiventity[${_ffxivplayer}].y}+35.9516)" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="宋体" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_0" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(0*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(0*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[1]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="21.75" TextAuraForeground="Red" TextAuraName="A" TextAuraExpression="A" TextAuraXIniExpression="2*${_screenwidth}/3" TextAuraYIniExpression="${_screenheight}/2-150" TextAuraWIniExpression="25" TextAuraHIniExpression="25" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="21.75" TextAuraForeground="Red" TextAuraName="C" TextAuraExpression="C" TextAuraXIniExpression="2*${_screenwidth}/3" TextAuraYIniExpression="${_screenheight}/2+150" TextAuraWIniExpression="25" TextAuraHIniExpression="25" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="21.75" TextAuraForeground="Red" TextAuraName="B" TextAuraExpression="B" TextAuraXIniExpression="2*${_screenwidth}/3-150" TextAuraYIniExpression="${_screenheight}/2" TextAuraWIniExpression="25" TextAuraHIniExpression="25" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="21.75" TextAuraForeground="Red" TextAuraName="D" TextAuraExpression="D" TextAuraXIniExpression="2*${_screenwidth}/3+150" TextAuraYIniExpression="${_screenheight}/2" TextAuraWIniExpression="25" TextAuraHIniExpression="25" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="10" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_1" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(1*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(1*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[2]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_2" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(2*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(2*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[3]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_3" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(3*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(3*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[4]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="13" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_4" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(4*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(4*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[5]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="14" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_5" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(5*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(5*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[6]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="15" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_6" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(6*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(6*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[7]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_7" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(7*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(7*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[8]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="17" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_8" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(8*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(8*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[9]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="18" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_9" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(9*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(9*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[10]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="19" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_10" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(10*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(10*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[11]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="20" LogLevel="-1" MouseX="" MouseY="" TextAuraEffect="Bold" TextAuraFontSize="6.75" TextAuraForeground="White" TextAuraBackground="Lime" TextAuraName="yidao_11" TextAuraXIniExpression="2*${_screenwidth}/3-${numeric:sin(11*pi/6)}*100" TextAuraYIniExpression="${_screenheight}/2-${numeric:cos(11*pi/6)}*100" TextAuraWIniExpression="15" TextAuraHIniExpression="15" TextAuraOIniExpression="100" TextAuraTTLTickExpression="8000-${_sincems}" TextAuraFontName="微软雅黑" ActionType="TextAura">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:安全点list[12]}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>

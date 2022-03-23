@@ -1,0 +1,857 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="20db7b0a-b263-4066-ba74-5c23d54f035b" Name="dingzhi" Enabled="true">
+    <Folders>
+      <Folder Id="fb316a18-a70a-43cc-8f6f-15c1531c53ec" Name="don't touch" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="1.主动触发" Id="f5f66cb0-f127-4934-8cc5-590d96b239e1" RegularExpression="^.{15}00:0038:开始收雇员">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="开始收雇员" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="97" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="121" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="121" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="fb30ef54-1f0b-419c-8ca8-7be2d6a7fb18" TriggerForce="regexp,refire,parent,active" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="2.挂机触发" Id="aa17efa0-d804-4a45-aff5-b1515937144f" RegularExpression="^.{15}00:0038:(开始|结束)挂机">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="a16c51b5-5f16-4ac0-8f98-979f9558465a" TriggerForce="true" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="开始" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="开始挂机" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="a16c51b5-5f16-4ac0-8f98-979f9558465a" TriggerForce="true" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="开始" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a16c51b5-5f16-4ac0-8f98-979f9558465a" TriggerForce="true" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="结束" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="停止挂机" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a16c51b5-5f16-4ac0-8f98-979f9558465a" TriggerForce="true" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="结束" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员1" Id="fb30ef54-1f0b-419c-8ca8-7be2d6a7fb18" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="acd8c9c8-d2b4-49d9-9879-baf057dc8027" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员2" Id="acd8c9c8-d2b4-49d9-9879-baf057dc8027" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="0dc5e901-2ae4-4916-af66-942a255017c0" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员3" Id="0dc5e901-2ae4-4916-af66-942a255017c0" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="68deeb27-e5fb-4bbe-b2b1-96f77c13a62e" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员4" Id="68deeb27-e5fb-4bbe-b2b1-96f77c13a62e" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="6656bc50-9d73-4ea1-9ad2-16668bd535e7" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员5" Id="6656bc50-9d73-4ea1-9ad2-16668bd535e7" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="d485c81f-a232-4c0b-8d31-5f9cdabc80c0" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员6" Id="d485c81f-a232-4c0b-8d31-5f9cdabc80c0" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="21" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="89274bd2-3e18-4f60-b59f-fd576dd47a65" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员7" Id="89274bd2-3e18-4f60-b59f-fd576dd47a65" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="21" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="22" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="25e8a75f-4a7f-411b-94ad-06babdffd76b" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员8" Id="25e8a75f-4a7f-411b-94ad-06babdffd76b" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="21" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="22" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="23" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="93bd7f91-b9d9-4187-8374-5934d3bb68ca" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员9" Id="93bd7f91-b9d9-4187-8374-5934d3bb68ca" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="98" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="300">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="100" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="21" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="22" KeypressType="WindowMessage" KeyPressCode="27" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="23" KeypressType="WindowMessage" KeyPressCode="48" KeyPressWindow="最终幻想XIV" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:DZ-guyuangeshu}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="雇员提醒" Id="a16c51b5-5f16-4ac0-8f98-979f9558465a" RegularExpression="^.{15}00:0039:雇员.*?成功完成了探险！$" PrevActionsRefire="Deny" PeriodRefire="Deny" RefirePeriodExpression="3000000">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="7.8" TextAuraFontName="Microsoft Sans Serif" TriggerId="f5f66cb0-f127-4934-8cc5-590d96b239e1" TriggerForce="regexp,refire,parent,active" ActionType="Trigger" ExecutionDelayExpression="180000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>

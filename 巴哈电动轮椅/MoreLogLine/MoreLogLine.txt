@@ -1,0 +1,4 @@
+ObjectSpawn|0306
+WeatherChange|03dc
+MapEffect|0247
+ActorMove|0310

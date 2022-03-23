@@ -1,0 +1,3 @@
+ObjectSpawn|0174
+WeatherChange|0118
+MapEffect|0244
